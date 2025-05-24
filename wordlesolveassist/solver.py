@@ -4,9 +4,11 @@ class WordleSolver:
     def __init__(self, word_list):
         self.word_list = word_list
 
-    def filter_words(self, guess, verdict):
+    def filter_words(self, guess, verdict, words=None):
+        if words is None:
+            words = self.word_list
         filtered_words = []
-        for word in self.word_list:
+        for word in words:
             if self.__matches_constraints(word, guess, verdict):
                 filtered_words.append(word)
         return filtered_words

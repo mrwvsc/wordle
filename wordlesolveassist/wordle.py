@@ -1,5 +1,7 @@
 from enum import Enum
 
+
+
 LETTER_COUNT = 5
 
 # Enum for letter verdicts
